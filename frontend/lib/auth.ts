@@ -21,8 +21,7 @@ export interface VaultAccessResponse {
 
 class AuthService {
   private static instance: AuthService;
-  private readonly API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
-
+ private readonly API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
   private constructor() {}
 
   public static getInstance(): AuthService {
@@ -51,7 +50,7 @@ class AuthService {
   }
 
   public async signup(email: string, password: string, masterPassword: string): Promise<AuthResponse> {
-    const response = await fetch(`${this.API_BASE}/auth/signup`, {
+    const response = await fetch(`${this.API_BASE}/auth/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
