@@ -50,7 +50,7 @@ class AuthService {
   }
 
   public async signup(email: string, password: string, masterPassword: string): Promise<AuthResponse> {
-    const response = await fetch(`${this.API_BASE}/auth/register`, {
+    const response = await fetch(`${this.API_BASE}/auth/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
