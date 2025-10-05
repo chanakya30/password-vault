@@ -6,7 +6,7 @@ import { ThemeManager } from '../lib/theme';
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     ThemeManager.initialize();
-  }, []);
+  }, []); // Fixed: Added empty dependency array
 
   return <Component {...pageProps} />;
 }
