@@ -1,0 +1,15 @@
+# Node
+node_modules
+.env
+dist
+build
+.next
+coverage
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
