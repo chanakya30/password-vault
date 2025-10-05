@@ -21,7 +21,7 @@ export interface VaultAccessResponse {
 
 class AuthService {
   private static instance: AuthService;
- private readonly API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+ private readonly API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
   private constructor() {}
 
   public static getInstance(): AuthService {
